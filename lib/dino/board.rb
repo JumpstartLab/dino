@@ -91,6 +91,7 @@ module Dino
 
     def start_heart_beat
       @heart_beat ||= Thread.new do
+        puts "Starting a heartbeat thread"
         loop do
           sleep 0.005
           @digital_hardware.each do |part|
